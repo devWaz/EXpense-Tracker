@@ -9,14 +9,14 @@ const ExpenseForm = ({expense , setExpense}) => {
 
     const addExpense = (e) => {
         e.preventDefault();
-        console.log(date.current.value.split("-"));
-        let d = date.current.value;
-        let newD = new Date(d[0], d[1], d[2]);
+       
+        let d = date.current.value.split("-");
+        let newD = new Date(d[0], d[1]-1, d[2]);
 
         setExpense([...expense , {
-            desc : desc.current.value,
-            price : price.current.value,
-            date : newD.getTime()
+            "desc" : desc.current.value,
+            "price" : price.current.value,
+            "date" : newD.getTime()
         }]);
 
         desc.current.value = "";

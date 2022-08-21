@@ -10,8 +10,13 @@
 .App {
   width: 70vw;
   margin: auto;
-  border: 1px solid ;
-  height: 100vh;
+  /* border: 1px solid ; */
+  
+}
+
+body{
+  max-height: 100vh;
+  overflow: hidden;
 }
 
 nav h1 {
@@ -45,4 +50,44 @@ nav h1 {
   background: black;
   color: white;
   border-radius: 10px;
+}
+
+.expense-item {
+  border-bottom: 1px solid #888;
+  display: flex;
+  justify-content: space-around;
+  padding: .6rem;
+}
+
+.expense-log{
+  
+  overflow-y: scroll;
+  max-height: 40vh;
+  /* border: 1px solid red; */
+}
+
+.history{
+  margin-top: 1rem;
+}
+
+.expense-log p {
+  font-weight: 600;
+}
+
+.cancel-btn {
+  border: none;
+  /* position: absolute; */
+  margin-left: -6rem;
+  background-color: #FFF;
+  /* left: 5rem; */
+}
+
+.desc{
+  font-weight: 700;
+  /* color: #888; */
+}
+
+.price{
+  font-weight: 500;
+  color: #888;
 }

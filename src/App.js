@@ -11,11 +11,10 @@ function App() {
   useEffect(() => {
     let temp = 0;
     for(let i = 0; i < expense.length; i++) {
-      temp += parseInt(expense[i].price)
+      temp += parseInt(expense[i].price);
     }
-
-    setBalance(temp)
-} , [expense])
+    setBalance(temp);
+} , [expense]);
 
   return (
     <div className="App">

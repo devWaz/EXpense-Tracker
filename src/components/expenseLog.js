@@ -12,7 +12,9 @@ const ExpenseLog = ({expense , setExpense}) => {
     }
 
     return ( 
-        <div className="expense-log">
+        <div className="history">
+            <p>Expense History</p>
+            <div className="expense-log">
             {
                 expense.sort(sortByDate).map((value , index) => (
                     <ExpenseItem 
@@ -22,7 +24,7 @@ const ExpenseLog = ({expense , setExpense}) => {
                     removeExpense={removeExpense} />
                 ))
             }
-
+            </div>
         </div>
      );
 }

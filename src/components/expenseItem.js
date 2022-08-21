@@ -5,16 +5,16 @@ const ExpenseItem = ({expense , index , removeExpense}) => {
     let year = date.getFullYear();
 
     const handleRemove = (i) => {
-        removeExpense(i)
+        removeExpense(i);
     }
 
 
     return ( 
-        <div>
-            <button onClick={handleRemove(index)}>❌</button>
+        <div className="expense-item">
+            <button onClick={() => handleRemove(index)} className="cancel-btn">❌</button>
             <div className="desc">{expense.desc}</div>
             <div className="price">${expense.price}</div>
-            <div className="desc">{day + "/" + month + "/" + year}</div>
+            <div className="date">{day + "/" + month + "/" + year}</div>
         </div> 
     );
 }

@@ -1,4 +1,4 @@
-const Balance = ({balance , setBalance}) => {
+const Balance = ({balance}) => {
     
     return ( 
         <div>
